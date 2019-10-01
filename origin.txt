@@ -1,0 +1,68 @@
+Uri: https://www.ryanmichaelj.com/
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\index.htm
+Content Type: text/html
+
+Uri: https://www.ryanmichaelj.com/css/img/bg-r.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\bg-r.jpg
+Content Type: image/jpeg
+
+Uri: https://www.ryanmichaelj.com/css/img/bg-t.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\bg-t.jpg
+Content Type: image/jpeg
+
+Uri: https://www.ryanmichaelj.com/css/img/bg-o.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\bg-o.jpg
+Content Type: image/jpeg
+
+Uri: https://www.ryanmichaelj.com/css/img/bg-d.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\bg-d.jpg
+Content Type: image/jpeg
+
+Uri: https://www.ryanmichaelj.com/css/img/bg-b.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\bg-b.jpg
+Content Type: image/jpeg
+
+Uri: https://www.ryanmichaelj.com/css/img/favicon-32x32.png
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\favicon-32x32.png
+Content Type: image/png
+
+Uri: https://www.ryanmichaelj.com/css/img/favicon-16x16.png
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\favicon-16x16.png
+Content Type: image/png
+
+Uri: https://www.ryanmichaelj.com/css/main.css?v=2.0.7
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\main.css
+Content Type: text/css
+
+Uri: https://www.ryanmichaelj.com/js/vendor/modernizr-2.8.3.min.js
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\js\vendor\modernizr-2.8.3.min.js
+Content Type: application/javascript
+
+Uri: https://www.ryanmichaelj.com/css/img/ink.mp4
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\ink.mp4
+Content Type: video/mp4
+
+Uri: https://www.ryanmichaelj.com/js/plugins.js
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\js\plugins.js
+Content Type: application/javascript
+
+Uri: https://www.ryanmichaelj.com/js/contact-form.js
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\js\contact-form.js
+Content Type: application/javascript
+
+Uri: https://www.ryanmichaelj.com/js/main.js?v=1.0.1
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\js\main.js
+Content Type: application/javascript
+
+Uri: https://www.ryanmichaelj.com/css/img/dribbble-logo.svg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\dribbble-logo.svg
+Content Type: image/svg+xml
+
+Uri: https://www.ryanmichaelj.com/css/img/command.svg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\command.svg
+Content Type: image/svg+xml
+
+Uri: https://www.ryanmichaelj.com/css/img/cover.jpg
+File Name: D:\Evan\Project\CORE Design\Portfolio\www.ryanmichaelj.com\css\img\cover.jpg
+Content Type: image/jpeg
+

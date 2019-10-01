@@ -1,0 +1,147 @@
+﻿<!doctype html>
+
+<html class="no-js" lang="">
+	
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Yonathan Evan C | Fullstack Developer, UI&UX Designer</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<link rel="icon" type="image/png" href="css\img\32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="css\img\16x16.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/717918/7705352/css/fonts.css">
+		<link rel="stylesheet" href="css\main.css?v=2.0.7">
+		<script src="js\vendor\modernizr-2.8.3.min.js"></script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="loader" class="loading"></div>
+		
+		<h1>Yonathan Evan C. <br><span>Fullstack Developer | UI&UX Designer</span></h1>
+		
+		<ul id="nav">
+			<li class="current"><a href="#home">Home</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li id="trigger-cycle"><a href="#work">My Recent Work</a></li>
+		</ul>
+		
+		<section id="home">
+			<video id="ink" preload="auto" poster="css/img/cover.jpg"> 
+				<source src="css\img\ink.mp4" type="video/mp4">
+			</video>
+			<div id="command"></div>
+		</section>
+		
+		<section id="about">
+			<p>A Customer Centric Developer, of brands like Deeptech Foundation, Pemimpin.id, and Wish Scholarship Indonesia. Currently seeking new challenge to Join, and Bridge something disruptive. 
+			</p>
+			<!-- If you have a project you'd like to discuss, 
+				<span id="trigger-contact">contact me</span>.</p>
+			<form action="mailto:yonathanevan@gmail.com" enctype="application/x-www-form-urlencoded;" id="contact-form" class="form-horizontal" role="form" method="post">
+				<ul class="cf">
+					<li>
+						<label>
+							<span>Name</span>
+							<input type="text" class="form-control" id="form-name" name="form-name" required="">
+						</label>
+					</li>
+					<li>
+						<label>
+							<span>URL / Project Name</span>
+							<input type="text" class="form-control" id="form-subject" name="form-subject" required="">
+						</label>
+					</li>
+					<li>
+						<label>
+							<span>Phone (Whatsapp Number)</span>
+							<input type="tel" class="form-control" id="form-phone" name="form-phone" required="">
+						</label>
+					</li>
+					<li>
+						<label>
+							<span>Email</span>
+							<input type="email" class="form-control" id="form-email" name="form-email" required="">
+						</label>
+					</li>
+					<li>
+						<label>
+							<span>Tell me about your project</span>
+							<textarea class="form-control" rows="6" id="form-message" name="form-message" required=""></textarea>
+						</label>
+					</li>
+				</ul>
+				<div class="submit">
+					<button type="submit"><span>Submit</span></button>
+				</div>	 -->
+		</section>
+		
+		<section id="work">
+			<nav id="cycle">
+				<a class="active" href="https://www.deeptech.id" target="_blank">
+					<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-deeptech.png)"></div>
+					<div class="cap"><span data-mouse-parallax=".03">D</span></div>
+					<div data-mouse-parallax=".03" class="url">Deeptech Foundation | Gatsby, Contentful CMS and Netlify</div>
+				</a>
+				<a href="http://fellowship.pemimpin.id/" target="_blank">
+					<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-fellowship.png)"></div>
+					<div class="cap"><span data-mouse-parallax=".03">F</span></div>
+					<div data-mouse-parallax=".03" class="url">Fellowship Pemimpin.id | React, and Mysql CRUD</div>
+				</a>
+				<a href="https://titiktemuchat.firebaseapp.com/landingpage" target="_blank">
+					<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-titiktemu.png)"></div>
+					<div class="cap"><span data-mouse-parallax=".03">T</span></div>
+					<div data-mouse-parallax=".03" class="url">Titiktemu (Personal Project) | React, and Firebase</div>
+				</a>
+				<a href="https://wish-scholarship.netlify.com/" target="_blank">
+					<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-wish.png)"></div>
+					<div class="cap"><span data-mouse-parallax=".03">W</span></div>
+					<div data-mouse-parallax=".03" class="url">Wish Scholarship | HTML, CSS, Google Maps and Netlify</div>
+				</a>
+				<nav id="pager"><span class="active"></span><span></span><span></span><span></span></nav>
+			</nav>
+			<svg id="cycle-loader" class="hide" x="0px" y="0px" viewbox="0 0 40 40" style="enable-background:new 0 0 40 40;">
+				<circle fill="none" cx="20" cy="20" r="18"></circle>
+			</svg>
+		</section>
+		
+		<div id="copyright">&copy; 2019</div>
+		
+		<a id="linkedin" href="https://www.linkedin.com/in/yonathan-evan-69a2a08a/" target="_blank"></a>
+		<a id="github" href="https://github.com/studentofcoding/" target="_blank"></a>
+		
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="js\plugins.js"></script>
+		<script src="js\contact-form.js"></script>
+		<script type="text/javascript">new ContactForm('#contact-form', { endpoint: './process.php' });</script>
+		<script src="js\main.js?v=1.0.1"></script>
+		<!-- <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-80700500-1', 'auto');
+			ga('send', 'pageview');
+		</script> -->
+	
+	</body>
+
+</html>
+
+
+
+				
+				<!--<form accept-charset="UTF-8" action="https://usebasin.com/f/93a2f865c107" enctype="multipart/form-data" method="POST">
+				<label for="email-address">Email Address</label>
+					<input type="email" id="email" name="email" required>
+				<label for="num">Number (</label>
+					<textarea rows="4" cols="50" name="comment" required>
+					</textarea>
+			<div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy">
+			</div>
+			<button type="submit">Submit</button>
+			</form> -->
