@@ -89,7 +89,7 @@ h1 span
     line-height: 1em;
     text-transform: uppercase;
 	position: fixed;
-    bottom: 10.0rem;
+    bottom: 7.0rem;
     right: 4.0rem;
     white-space: nowrap;
     -ms-transform: rotate(90deg);
@@ -114,7 +114,7 @@ h1 span
 	right: 3rem;
 	width: 1.8rem;
 	height: 1.8rem;
-	background: transparent url(img/github-logo.svg) no-repeat center scroll;
+	background: transparent url(img/github-logo.png) no-repeat center scroll;
 	background-size: 1.8rem auto;
 	z-index: 100;
 }
