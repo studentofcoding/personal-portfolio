@@ -47,10 +47,10 @@ jQuery(document).ready(function($) {
 	 * Work Cycle
 	 */
 	function cycle(){
-		var index  = 0;
-		var $pager = $('#pager span');
-		var $cycle = $('#cycle > a');
-		var pagerTimer = setInterval(function() {
+		let index  = 0;
+		let $pager = $('#pager span');
+		let $cycle = $('#cycle > a');
+		let pagerTimer = setInterval(function() {
 			index = (index < $pager.length - 1) ? index + 1 : 0;
 			$cycle.removeClass('active').eq(index).addClass('active');
 			$pager.removeClass('active').eq(index).addClass('active');
@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 				$pager.removeClass('active').eq(index).addClass('active');
 			}
 		});
-	};
+	}
 	
 	
 	/*
@@ -72,18 +72,18 @@ jQuery(document).ready(function($) {
 	$('#work').mousemove(function(e){
 		if(Modernizr.touch) return;
 		// Get Cursor Coordinates
-		var mouseX = e.pageX;
-		var mouseY = e.pageY;
+		let mouseX = e.pageX;
+		let mouseY = e.pageY;
 		// Loop through each element with the data attribute
 		$('*[data-mouse-parallax]').each(function(){
 			// Calculate mouse position minus the position of the center of each element
-			var x = mouseX - $(this).offset().left - ($(this).width() / 2);
-			var y = mouseY - $(this).offset().top - ($(this).height() / 2);
+			let x = mouseX - $(this).offset().left - ($(this).width() / 2);
+			let y = mouseY - $(this).offset().top - ($(this).height() / 2);
 			// Get multiplier value from data attribute
-			var factor = parseFloat($(this).data('mouse-parallax'));
+			let factor = parseFloat($(this).data('mouse-parallax'));
 			// Calculate transform values
-			var newX = x * factor;
-			var newY = y * factor;
+			let newX = x * factor;
+			let newY = y * factor;
 			$(this).css({ 'transform': 'translate3d( '+ newX + 'px, ' + newY + 'px, 0 )' });
 		});
 	});

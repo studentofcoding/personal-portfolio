@@ -395,10 +395,11 @@ section#work {
 				transform: translate3d(0,0,0);
 			}
 			.cap {
+				display: none;
 				white-space: nowrap;
 				position: absolute;
 				font-size: 22.0rem;
-				line-height: 30.0rem;
+				line-height: 50.0rem;
 				font-weight: 700;
 				-ms-transform: translateX(-50%);
 				    transform: translateX(-50%);
