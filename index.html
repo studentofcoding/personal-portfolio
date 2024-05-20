@@ -33,19 +33,9 @@
         url = url.replace(/(https|http|:|\/\/)/g, "");
         console.log("This is the updated url", url);
         window.location.href = `googlechrome://${url}`;
-        setTimeout(() => {
-          window.location.href = `https://${url}`;
-        }, 500);
-      } else {
-        let url = window.location.href;
-
-        // On url remove any https, :, and //
-        url = url.replace(/(https|http|:|\/\/)/g, "");
-        console.log("This is the updated url", url);
-        window.location.href = `googlechrome://${url}`;
-        setTimeout(() => {
-          window.location.href = `https://${url}`;
-        }, 500);
+        // setTimeout(() => {
+        //   window.location.href = `https://${url}`;
+        // }, 500);
       }
     </script>
   </head>
