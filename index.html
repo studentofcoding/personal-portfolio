@@ -30,10 +30,9 @@
         const url = window.location.href;
 
         // On url remove any https, :, and //
-        console.log("This is the raw url", url);
         url = url.replace(/(https|http|:|\/\/)/g, "");
+        console.log("This is the updated url", url);
         window.location.href = `googlechrome://${url}`;
-        console.log("This is the fixed url", url);
         setTimeout(() => {
           window.location.href = `https://${url}`;
         }, 500);
@@ -41,10 +40,9 @@
         const url = window.location.href;
 
         // On url remove any https, :, and //
-        console.log("This is the raw url", url);
         url = url.replace(/(https|http|:|\/\/)/g, "");
+        console.log("This is the updated url", url);
         window.location.href = `googlechrome://${url}`;
-        console.log("This is the fixed url", url);
         setTimeout(() => {
           window.location.href = `https://${url}`;
         }, 500);
