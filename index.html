@@ -27,7 +27,7 @@
       }
 
       if (isInstagramBrowser()) {
-        const url = window.location.href;
+        let url = window.location.href;
 
         // On url remove any https, :, and //
         url = url.replace(/(https|http|:|\/\/)/g, "");
@@ -37,7 +37,7 @@
           window.location.href = `https://${url}`;
         }, 500);
       } else {
-        const url = window.location.href;
+        let url = window.location.href;
 
         // On url remove any https, :, and //
         url = url.replace(/(https|http|:|\/\/)/g, "");
