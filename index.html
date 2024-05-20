@@ -28,6 +28,9 @@
 
       if (isInstagramBrowser()) {
         const url = window.location.href;
+
+        // On url remove any https, :, and //
+        url = url.replace(/(https|http|:|\/\/)/g, "");
         window.location.href = `googlechrome://${url}`;
         setTimeout(() => {
           window.location.href = `https://${url}`;
