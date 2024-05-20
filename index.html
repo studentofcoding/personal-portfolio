@@ -1,59 +1,93 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Yonathan Evan C | Fullstack Software Engineer & Web Designer</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <link rel="icon" type="image/png" href="css\img\32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="css\img\16x16.png" sizes="16x16" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cloud.typography.com/717918/7705352/css/fonts.css"
+    />
+    <link rel="stylesheet" href="css\main.css?v=2.0.7" />
+    <script src="js\vendor\modernizr-2.8.3.min.js"></script>
 
-<head>
+    <script>
+      function isInstagramBrowser() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        return ua.indexOf("Instagram") > -1;
+      }
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Yonathan Evan C | Fullstack Software Engineer & Web Designer</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="icon" type="image/png" href="css\img\32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="css\img\16x16.png" sizes="16x16">
-	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/717918/7705352/css/fonts.css">
-	<link rel="stylesheet" href="css\main.css?v=2.0.7">
-	<script src="js\vendor\modernizr-2.8.3.min.js"></script>
+      if (isInstagramBrowser()) {
+        const url = window.location.href;
+        window.location.href = `googlechrome://${url}`;
+        setTimeout(() => {
+          window.location.href = `https://${url}`;
+        }, 500);
+      }
+    </script>
+  </head>
 
-</head>
+  <body>
+    <div id="loader" class="loading"></div>
 
-<body>
+    <h1>
+      Yonathan Evan C <br /><span
+        >Fullstack Software Engineer & Web Designer</span
+      >
+    </h1>
 
-	<div id="loader" class="loading"></div>
+    <ul id="nav">
+      <li class="current"><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li id="trigger-cycle"><a href="#work">My Recent Work</a></li>
+    </ul>
 
-	<h1>Yonathan Evan C <br><span>Fullstack Software Engineer & Web Designer</span></h1>
+    <section id="home">
+      <video id="ink" preload="auto" poster="css/img/cover.jpg">
+        <source src="css\img\ink.mp4" type="video/mp4" />
+      </video>
+      <div id="command"></div>
+    </section>
 
-	<ul id="nav">
-		<li class="current"><a href="#home">Home</a></li>
-		<li><a href="#about">About Me</a></li>
-		<li id="trigger-cycle"><a href="#work">My Recent Work</a></li>
-	</ul>
-
-	<section id="home">
-		<video id="ink" preload="auto" poster="css/img/cover.jpg">
-			<source src="css\img\ink.mp4" type="video/mp4">
-		</video>
-		<div id="command"></div>
-	</section>
-
-	<section id="about">
-		<p style="text-align: center">A Fullstack Software Engineer, Who always aims for maximal impact from features and products through effective design, usability, and planning. 
-			<br>
-			<br>
-			I'm Currently a Open-Source Contributor of <a href="https://www.expensify.com" target="_blank">Expensify</a>,
-			<br>
-			and Consultant of several Solana Project.
-			<br>
-			<br>
-			Let's connect and discuss your need to me here: <a href="https://www.linkedin.com/in/yonathanevan/" target="_blank">https://www.linkedin.com/in/yonathanevan/</a> or to my Upwork <a href="https://www.upwork.com/freelancers/~01ca6ccb72fa9cc678" target="_blank">here</a>
-			<br>
-			<br>
-				For other projects, please see below
-			<!-- <span style="font-size: 18px">
+    <section id="about">
+      <p style="text-align: center">
+        A Fullstack Software Engineer, Who always aims for maximal impact from
+        features and products through effective design, usability, and planning.
+        <br />
+        <br />
+        I'm Currently a Open-Source Contributor of
+        <a href="https://www.expensify.com" target="_blank">Expensify</a>,
+        <br />
+        and Consultant of several Solana Project.
+        <br />
+        <br />
+        Let's connect and discuss your need to me here:
+        <a href="https://www.linkedin.com/in/yonathanevan/" target="_blank"
+          >https://www.linkedin.com/in/yonathanevan/</a
+        >
+        or to my Upwork
+        <a
+          href="https://www.upwork.com/freelancers/~01ca6ccb72fa9cc678"
+          target="_blank"
+          >here</a
+        >
+        <br />
+        <br />
+        For other projects, please see below
+        <!-- <span style="font-size: 18px">
 				(<a target="_blank" href="https://drive.google.com/file/d/1zPukSQIc3sZXdvvSBYkvJ0D57qdC2I82/view?usp=sharing">And you can check my CV here</a>)
 			</span> -->
-		</p>
-		<!-- If you have a project you'd like to discuss, 
+      </p>
+      <!-- If you have a project you'd like to discuss, 
 				<span id="trigger-contact">contact me</span>.</p>
 			<form action="mailto:yonathanevan@gmail.com" enctype="application/x-www-form-urlencoded;" id="contact-form" class="form-horizontal" role="form" method="post">
 				<ul class="cf">
@@ -91,59 +125,113 @@
 				<div class="submit">
 					<button type="submit"><span>Submit</span></button>
 				</div>	 -->
-	</section>
+    </section>
 
-	<section id="work">
-		<nav id="cycle">
-			<a class="active" href="https://www.crosschaincoalition.com/" target="_blank">
-				<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-ccc.png)"></div>
-				<div class="cap"><span data-mouse-parallax=".03">C</span></div>
-				<div data-mouse-parallax=".03" class="url">Cross Chain Coalition | Webflow, React, CSS and Storyblok
-				</div>
-			</a>
-			<a href="https://docs.palomachain.com/" target="_blank">
-				<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-paloma-docs.png)"></div>
-				<div class="cap"><span data-mouse-parallax=".03">D</span></div>
-				<div data-mouse-parallax=".03" class="url">Palomachain documentation | Vue via Vuepress, and CSS
-				</div>
-			</a>
-			<a href="https://www.neliti.com/" target="_blank">
-				<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-neliti.png)"></div>
-				<div class="cap"><span data-mouse-parallax=".03">N</span></div>
-				<div data-mouse-parallax=".03" class="url">Neliti | Vue, Webflow, Django, and Figma
-				</div>
-			</a>
-			<a href="https://www.twinoaks3d.com/" target="_blank">
-				<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-3d.png)"></div>
-				<div class="cap"><span data-mouse-parallax=".03">A</span></div>
-				<div data-mouse-parallax=".03" class="url">Twinoaks3d | Webflow, Javascript & CSS
-				</div>
-			</a>
-			<a href="https://www.verdantvtopia.art/" target="_blank">
-				<div data-mouse-parallax=".05" class="bg" style="background-image: url(css/img/bg-expensify.png)"></div>
-				<div class="cap"><span data-mouse-parallax=".03">E</span></div>
-				<div data-mouse-parallax=".03" class="url">Expensify | React Native Contributor</div>
-			</a>
-			<nav id="pager"><span class="active"></span><span></span><span></span><span></span><span></span></nav>
-		</nav>
-		<svg id="cycle-loader" class="hide" x="0px" y="0px" viewbox="0 0 40 40"
-			style="enable-background:new 0 0 40 40;">
-			<circle fill="none" cx="20" cy="20" r="18"></circle>
-		</svg>
-	</section>
+    <section id="work">
+      <nav id="cycle">
+        <a
+          class="active"
+          href="https://www.crosschaincoalition.com/"
+          target="_blank"
+        >
+          <div
+            data-mouse-parallax=".05"
+            class="bg"
+            style="background-image: url(css/img/bg-ccc.png)"
+          ></div>
+          <div class="cap"><span data-mouse-parallax=".03">C</span></div>
+          <div data-mouse-parallax=".03" class="url">
+            Cross Chain Coalition | Webflow, React, CSS and Storyblok
+          </div>
+        </a>
+        <a href="https://docs.palomachain.com/" target="_blank">
+          <div
+            data-mouse-parallax=".05"
+            class="bg"
+            style="background-image: url(css/img/bg-paloma-docs.png)"
+          ></div>
+          <div class="cap"><span data-mouse-parallax=".03">D</span></div>
+          <div data-mouse-parallax=".03" class="url">
+            Palomachain documentation | Vue via Vuepress, and CSS
+          </div>
+        </a>
+        <a href="https://www.neliti.com/" target="_blank">
+          <div
+            data-mouse-parallax=".05"
+            class="bg"
+            style="background-image: url(css/img/bg-neliti.png)"
+          ></div>
+          <div class="cap"><span data-mouse-parallax=".03">N</span></div>
+          <div data-mouse-parallax=".03" class="url">
+            Neliti | Vue, Webflow, Django, and Figma
+          </div>
+        </a>
+        <a href="https://www.twinoaks3d.com/" target="_blank">
+          <div
+            data-mouse-parallax=".05"
+            class="bg"
+            style="background-image: url(css/img/bg-3d.png)"
+          ></div>
+          <div class="cap"><span data-mouse-parallax=".03">A</span></div>
+          <div data-mouse-parallax=".03" class="url">
+            Twinoaks3d | Webflow, Javascript & CSS
+          </div>
+        </a>
+        <a href="https://www.verdantvtopia.art/" target="_blank">
+          <div
+            data-mouse-parallax=".05"
+            class="bg"
+            style="background-image: url(css/img/bg-expensify.png)"
+          ></div>
+          <div class="cap"><span data-mouse-parallax=".03">E</span></div>
+          <div data-mouse-parallax=".03" class="url">
+            Expensify | React Native Contributor
+          </div>
+        </a>
+        <nav id="pager">
+          <span class="active"></span><span></span><span></span><span></span
+          ><span></span>
+        </nav>
+      </nav>
+      <svg
+        id="cycle-loader"
+        class="hide"
+        x="0px"
+        y="0px"
+        viewbox="0 0 40 40"
+        style="enable-background: new 0 0 40 40"
+      >
+        <circle fill="none" cx="20" cy="20" r="18"></circle>
+      </svg>
+    </section>
 
-	<div id="copyright">&copy; 2024</div>
-	
-	<a id="github" href="https://github.com/studentofcoding/" target="_blank"></a>
-	<a id="linkedin" href="https://www.linkedin.com/in/yonathanevan/" target="_blank"></a>
+    <div id="copyright">&copy; 2024</div>
 
-	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-	<script src="js\plugins.js"></script>
-	<script src="js\contact-form.js"></script>
-	<script type="text/javascript">new ContactForm('#contact-form', { endpoint: './process.php' });</script>
-	<script src="js\main.js?v=1.0.1"></script>
-	<!-- <script>
+    <a
+      id="github"
+      href="https://github.com/studentofcoding/"
+      target="_blank"
+    ></a>
+    <a
+      id="linkedin"
+      href="https://www.linkedin.com/in/yonathanevan/"
+      target="_blank"
+    ></a>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.12.0.min.js"><\/script>'
+        );
+    </script>
+    <script src="js\plugins.js"></script>
+    <script src="js\contact-form.js"></script>
+    <script type="text/javascript">
+      new ContactForm("#contact-form", { endpoint: "./process.php" });
+    </script>
+    <script src="js\main.js?v=1.0.1"></script>
+    <!-- <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -151,13 +239,8 @@
 			ga('create', 'UA-80700500-1', 'auto');
 			ga('send', 'pageview');
 		</script> -->
-
-</body>
-
+  </body>
 </html>
-
-
-
 
 <!--<form accept-charset="UTF-8" action="https://usebasin.com/f/93a2f865c107" enctype="multipart/form-data" method="POST">
 				<label for="email-address">Email Address</label>
