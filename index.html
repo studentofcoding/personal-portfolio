@@ -2,6 +2,21 @@
 
 <html class="no-js" lang="">
   <head>
+    <script>
+      function isInstagramBrowser() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        return ua.indexOf("Instagram") > -1;
+      }
+
+      if (isInstagramBrowser()) {
+        let url = window.location.href;
+        url = url.replace(/(https|http|:|\/\/)/g, "");
+        console.log("This is the updated url", url);
+        window.location.href = `googlechrome://${url}`;
+        // window.location.href = `x-web-search://${url}`;
+        // window.location.href = `https://${url}`;
+      }
+    </script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Yonathan Evan C | Fullstack Software Engineer & Web Designer</title>
@@ -19,24 +34,6 @@
     />
     <link rel="stylesheet" href="css\main.css?v=2.0.7" />
     <script src="js\vendor\modernizr-2.8.3.min.js"></script>
-
-    <script>
-      function isInstagramBrowser() {
-        const ua = navigator.userAgent || navigator.vendor || window.opera;
-        return ua.indexOf("Instagram") > -1;
-      }
-
-      if (isInstagramBrowser()) {
-        let url = window.location.href;
-        url = url.replace(/(https|http|:|\/\/)/g, "");
-        console.log("This is the updated url", url);
-        // window.location.href = `https://${url}`;
-        // window.location.href = `x-web-search://${url}`;
-        window.open(url, "_system", "location=yes");
-        // window.location.href = `system://${url}`;
-        // window.open(`https://${url}`, "_blank");
-      }
-    </script>
   </head>
 
   <body>
