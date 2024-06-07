@@ -31,7 +31,9 @@
         url = url.replace(/(https|http|:|\/\/)/g, "");
         console.log("This is the updated url", url);
         // window.location.href = `https://${url}`;
-        window.location.href = `x-web-search://?${url}`;
+        // window.location.href = `x-web-search://${url}`;
+        window.open(url, "_system", "location=yes");
+        // window.location.href = `system://${url}`;
         // window.open(`https://${url}`, "_blank");
       }
     </script>
