@@ -27,15 +27,11 @@
       }
 
       if (isInstagramBrowser()) {
-        function openInDefaultBrowser() {
-          let url = window.location.href;
-          url = url.replace(/(https|http|:|\/\/)/g, "");
-          console.log("This is the updated url", url);
-          // window.location.href = `https://${url}`;
-          window.open(`https://${url}`, "_blank", "noopener,noreferrer"); // Open the URL in a new tab
-        }
-
-        openInDefaultBrowser();
+        let url = window.location.href;
+        url = url.replace(/(https|http|:|\/\/)/g, "");
+        console.log("This is the updated url", url);
+        // window.location.href = `https://${url}`;
+        window.open(`https://${url}`, "_blank");
       }
     </script>
   </head>
