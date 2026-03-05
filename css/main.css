@@ -82,6 +82,18 @@ h1
 	z-index: 100;
 }
 
+#lang-toggle {
+    position: fixed;
+    top: 4.0rem;
+    inset-inline-end: 4.0rem;
+    z-index: 1000;
+    background: none;
+    border: 1px solid #222;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
 h1 span 
 {
 	font-weight: 400;
