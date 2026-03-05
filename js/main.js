@@ -131,7 +131,19 @@ jQuery(document).ready(function ($) {
 			about: "About Me",
 			work: "My Recent Work",
 			"number-example": "Number Format Example: ",
-			toggle: "العربية"
+			toggle: "العربية",
+			"about-intro": "A Fullstack Software Engineer, Who always aims for maximal impact from features and products through effective design, usability, and planning.",
+			"about-current": "I'm Currently a Open-Source Contributor of",
+			"about-consultant": "and Consultant of several Project whom needs to launch their MVP fast and efficient.",
+			"about-connect": "Let's connect and discuss your need to me here:",
+			"about-upwork": "or to my Upwork",
+			"here": "here",
+			"about-other": "For other projects, please see below",
+			"work-wpoptic": "Wpoptic | React, Chrome Extension, Manifest 3, and Supabase",
+			"work-reloadsol": "Reloadsol | Next.js, and Supabase",
+			"work-neliti": "Neliti | Vue, Webflow, Django, and Figma",
+			"work-twinoaks": "Twinoaks3d | Webflow, Javascript & CSS",
+			"work-expensify": "Expensify | React Native Contributor"
 		},
 		ar: {
 			role: "مهندس برمجيات ومصمم ويب",
@@ -139,7 +151,19 @@ jQuery(document).ready(function ($) {
 			about: "من أنا",
 			work: "أعمالي",
 			"number-example": "مثال تنسيق الأرقام: ",
-			toggle: "English"
+			toggle: "English",
+			"about-intro": "مهندس برمجيات متكامل، يهدف دائمًا لتحقيق أقصى تأثير من الميزات والمنتجات من خلال التصميم الفعال وسهولة الاستخدام والتخطيط.",
+			"about-current": "أعمل حاليًا كمساهم في المصادر المفتوحة لـ",
+			"about-consultant": "ومستشار للعديد من المشاريع التي تحتاج لإطلاق منتجها الأولي (MVP) بسرعة وكفاءة.",
+			"about-connect": "لنتواصل ونناقش احتياجاتك هنا:",
+			"about-upwork": "أو على Upwork",
+			"here": "هنا",
+			"about-other": "للمشاريع الأخرى، يرجى الاطلاع أدناه",
+			"work-wpoptic": "Wpoptic | React، إضافة كروم، Manifest 3، و Supabase",
+			"work-reloadsol": "Reloadsol | Next.js و Supabase",
+			"work-neliti": "Neliti | Vue، Webflow، Django، و Figma",
+			"work-twinoaks": "Twinoaks3d | Webflow، Javascript و CSS",
+			"work-expensify": "Expensify | مساهم في React Native"
 		}
 	};
 
