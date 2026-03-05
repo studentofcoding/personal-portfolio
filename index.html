@@ -1,7 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 
 <html class="no-js" lang="">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript">
       (window.NREUM || (NREUM = {})).init = {
         ajax: {
@@ -55,7 +61,7 @@
               function s(e) {
                 if (!e)
                   throw new Error(
-                    "All info objects require an agent identifier!"
+                    "All info objects require an agent identifier!",
                   );
                 if (!a[e])
                   throw new Error("Info for ".concat(e, " was never set"));
@@ -64,7 +70,7 @@
               function c(e, t) {
                 if (!e)
                   throw new Error(
-                    "All info objects require an agent identifier!"
+                    "All info objects require an agent identifier!",
                   );
                 a[e] = (0, i.D)(t, o);
                 const r = (0, n.ek)(e);
@@ -184,11 +190,11 @@
                         u(t)
                           ? (e.mask_selector = "".concat(t, ",").concat(f))
                           : "" === t || null === t
-                          ? (e.mask_selector = f)
-                          : (0, l.Z)(
-                              "An invalid session_replay.mask_selector was provided. '*' will be used.",
-                              t
-                            );
+                            ? (e.mask_selector = f)
+                            : (0, l.Z)(
+                                "An invalid session_replay.mask_selector was provided. '*' will be used.",
+                                t,
+                              );
                       },
                       get block_class() {
                         return "nr-block";
@@ -208,7 +214,7 @@
                           : "" !== t &&
                             (0, l.Z)(
                               "An invalid session_replay.block_selector was provided and will not be used",
-                              t
+                              t,
                             );
                       },
                       get mask_input_options() {
@@ -222,7 +228,7 @@
                             })
                           : (0, l.Z)(
                               "An invalid session_replay.mask_input_option was provided and will not be used",
-                              t
+                              t,
                             );
                       },
                     },
@@ -244,7 +250,7 @@
                 if (!e) throw new Error(h);
                 if (!p[e])
                   throw new Error(
-                    "Configuration for ".concat(e, " was never set")
+                    "Configuration for ".concat(e, " was never set"),
                   );
                 return p[e];
               }
@@ -276,7 +282,7 @@
               function w(e, t) {
                 if (!e)
                   throw new Error(
-                    "All loader-config objects require an agent identifier!"
+                    "All loader-config objects require an agent identifier!",
                   );
                 A[e] = (0, i.D)(t, y);
                 const r = (0, n.ek)(e);
@@ -311,7 +317,7 @@
               function k(e) {
                 if (!e)
                   throw new Error(
-                    "All runtime objects require an agent identifier!"
+                    "All runtime objects require an agent identifier!",
                   );
                 if (!R[e])
                   throw new Error("Runtime for ".concat(e, " was never set"));
@@ -320,7 +326,7 @@
               function N(e, t) {
                 if (!e)
                   throw new Error(
-                    "All runtime objects require an agent identifier!"
+                    "All runtime objects require an agent identifier!",
                   );
                 R[e] = {
                   ...(0, i.D)(t, S),
@@ -352,15 +358,15 @@
                 try {
                   if (!e || "object" != typeof e)
                     return (0, n.Z)(
-                      "Setting a Configurable requires an object as input"
+                      "Setting a Configurable requires an object as input",
                     );
                   if (!t || "object" != typeof t)
                     return (0, n.Z)(
-                      "Setting a Configurable requires a model to set its initial properties"
+                      "Setting a Configurable requires a model to set its initial properties",
                     );
                   const r = Object.create(
                       Object.getPrototypeOf(t),
-                      Object.getOwnPropertyDescriptors(t)
+                      Object.getOwnPropertyDescriptors(t),
                     ),
                     o = 0 === Object.keys(r).length ? e : r;
                   for (let a in o)
@@ -373,12 +379,12 @@
                         Array.isArray(e[a]) && Array.isArray(t[a])
                           ? (r[a] = Array.from(new Set([...e[a], ...t[a]])))
                           : "object" == typeof e[a] && "object" == typeof t[a]
-                          ? (r[a] = i(e[a], t[a]))
-                          : (r[a] = e[a]);
+                            ? (r[a] = i(e[a], t[a]))
+                            : (r[a] = e[a]);
                       } catch (e) {
                         (0, n.Z)(
                           "An error occurred while setting a property of a Configurable",
-                          e
+                          e,
                         );
                       }
                   return r;
@@ -436,7 +442,7 @@
                 d =
                   ((() => {
                     const e = a.navigator?.userAgent?.match(
-                      /Firefox[/\s](\d+\.\d+)/
+                      /Firefox[/\s](\d+\.\d+)/,
                     );
                     Array.isArray(e) && e.length >= 2 && e[1];
                   })(),
@@ -459,19 +465,19 @@
                   try {
                     if ("object" != typeof e)
                       return (0, n.Z)(
-                        "shared context requires an object as input"
+                        "shared context requires an object as input",
                       );
-                    (this.sharedContext = {}),
+                    ((this.sharedContext = {}),
                       Object.assign(this.sharedContext, i),
                       Object.entries(e).forEach((e) => {
                         let [t, r] = e;
                         Object.keys(i).includes(t) &&
                           (this.sharedContext[t] = r);
-                      });
+                      }));
                   } catch (e) {
                     (0, n.Z)(
                       "An error occurred while setting SharedContext",
-                      e
+                      e,
                     );
                   }
                 }
@@ -494,10 +500,10 @@
                   staged: !1,
                   priority: a.p[t] || 0,
                 };
-                d(e), s[e].get(t) || s[e].set(t, r);
+                (d(e), s[e].get(t) || s[e].set(t, r));
               }
               function u(e, t) {
-                d(e), s[e].get(t) && s[e].delete(t), s[e].size && f(e);
+                (d(e), s[e].get(t) && s[e].delete(t), s[e].size && f(e));
               }
               function d(e) {
                 if (!e) throw new Error("agentIdentifier required");
@@ -517,7 +523,7 @@
                     void 0 !== arguments[2] &&
                     arguments[2];
                 if ((d(e), !e || !s[e].get(t) || r)) return g(e, t);
-                (s[e].get(t).staged = !0), f(e);
+                ((s[e].get(t).staged = !0), f(e));
               }
               function f(e) {
                 const t = Array.from(s[e]);
@@ -528,7 +534,7 @@
                   (t.sort((e, t) => e[1].priority - t[1].priority),
                   t.forEach((t) => {
                     let [r] = t;
-                    s[e].delete(r), g(e, r);
+                    (s[e].delete(r), g(e, r));
                   }));
               }
               function g(e, t) {
@@ -545,9 +551,9 @@
                       });
                     });
                   }
-                  r.isolatedBacklog || delete a[t],
+                  (r.isolatedBacklog || delete a[t],
                     (r.backlog[t] = null),
-                    r.emit("drain-" + t, []);
+                    r.emit("drain-" + t, []));
                 }
               }
               function p(e, t) {
@@ -618,14 +624,14 @@
                       if (((t = t || "feature"), f.aborted)) return;
                       Object.entries(e || {}).forEach((e) => {
                         let [n, i] = e;
-                        (s[i] = t), t in r || (r[t] = []);
+                        ((s[i] = t), t in r || (r[t] = []));
                       });
                     },
                     abort: function () {
-                      (f._aborted = !0),
+                      ((f._aborted = !0),
                         Object.keys(f.backlog).forEach((e) => {
                           delete f.backlog[e];
-                        });
+                        }));
                     },
                     isBuffering: function (e) {
                       return !!m()[s[e]];
@@ -634,8 +640,8 @@
                     backlog: l
                       ? {}
                       : t && "object" == typeof t.backlog
-                      ? t.backlog
-                      : {},
+                        ? t.backlog
+                        : {},
                     isolatedBacklog: l,
                   };
                   return (
@@ -651,8 +657,8 @@
                     return e && e instanceof a
                       ? e
                       : e
-                      ? (0, i.X)(e, c, () => new a(c))
-                      : new a(c);
+                        ? (0, i.X)(e, c, () => new a(c))
+                        : new a(c);
                   }
                   function p(e, t) {
                     n[e] = h(e).concat(t);
@@ -695,7 +701,7 @@
                 a(o || n.E, i, e, t, r);
               }
               function a(e, t, r, i, o) {
-                o || (o = "feature"), e || (e = n.E);
+                (o || (o = "feature"), e || (e = n.E));
                 var a = (t[o] = t[o] || {});
                 (a[r] = a[r] || []).push([e, i]);
               }
@@ -713,14 +719,14 @@
               try {
                 const e = {
                   get passive() {
-                    return (i = !0), !1;
+                    return ((i = !0), !1);
                   },
                   get signal() {
-                    return (o = !0), !1;
+                    return ((o = !0), !1);
                   },
                 };
-                n._A.addEventListener("test", null, e),
-                  n._A.removeEventListener("test", null, e);
+                (n._A.addEventListener("test", null, e),
+                  n._A.removeEventListener("test", null, e));
               } catch (e) {}
               function a(e, t) {
                 return i || o
@@ -780,8 +786,8 @@
                       "x" === e
                         ? o(t, r++).toString(16)
                         : "y" === e
-                        ? ((3 & o()) | 8).toString(16)
-                        : e
+                          ? ((3 & o()) | 8).toString(16)
+                          : e,
                     )
                     .join("")
                 );
@@ -862,7 +868,7 @@
                 s = {};
               function c(e, t) {
                 const r = n.ee.get(t);
-                (s[t] ??= {}),
+                ((s[t] ??= {}),
                   e &&
                     "object" == typeof e &&
                     (a.has(t) ||
@@ -878,12 +884,12 @@
                           i._A.dispatchEvent(
                             new CustomEvent(o, {
                               detail: e,
-                            })
+                            }),
                           );
                         } catch (e) {}
                       })({
                         loaded: !0,
-                      })));
+                      }))));
               }
             },
             2210: (e, t, r) => {
@@ -906,7 +912,7 @@
                       i
                     );
                   } catch (e) {}
-                return (e[t] = i), i;
+                return ((e[t] = i), i);
               }
             },
             7872: (e, t, r) => {
@@ -930,7 +936,7 @@
                     s++
                   )
                     a[s] = arguments[s];
-                  i &&
+                  (i &&
                     void 0 === o &&
                     (e.apply(t, a),
                     (o = setTimeout(() => {
@@ -940,7 +946,7 @@
                       (clearTimeout(o),
                       (o = setTimeout(() => {
                         e.apply(t, a);
-                      }, r)));
+                      }, r))));
                 };
               }
               function i(e) {
@@ -1067,12 +1073,12 @@
               }
               function c(e, t) {
                 let r = a();
-                (r.initializedAgents ??= {}),
+                ((r.initializedAgents ??= {}),
                   (t.initializedAt = {
                     ms: (0, i.z)(),
                     date: new Date(),
                   }),
-                  (r.initializedAgents[e] = t);
+                  (r.initializedAgents[e] = t));
               }
               function u(e) {
                 let t = a();
@@ -1134,7 +1140,7 @@
                     e(document.visibilityState);
                   },
                   r,
-                  i
+                  i,
                 );
               }
             },
@@ -1180,7 +1186,7 @@
                 REPLAY_RUNNING: "replayRunning",
                 ERROR_DURING_REPLAY: "errorDuringReplay",
               };
-              n.IK.ERROR, n.IK.FULL, n.IK.OFF;
+              (n.IK.ERROR, n.IK.FULL, n.IK.OFF);
             },
             5938: (e, t, r) => {
               "use strict";
@@ -1190,11 +1196,11 @@
               var n = r(8325);
               class i {
                 constructor(e, t, r) {
-                  (this.agentIdentifier = e),
+                  ((this.agentIdentifier = e),
                     (this.aggregator = t),
                     (this.ee = n.ee.get(e)),
                     (this.featureName = r),
-                    (this.blocked = !1);
+                    (this.blocked = !1));
                 }
               }
             },
@@ -1268,7 +1274,7 @@
               var A = r(2825);
               const w = (e) => {
                 const t = e.startsWith("http");
-                (e += "/"), (r.p = t ? e : "https://" + e);
+                ((e += "/"), (r.p = t ? e : "https://" + e));
               };
               let _ = !1;
               function E(e) {
@@ -1288,15 +1294,15 @@
                     exposed: k = !0,
                   } = t;
                 const N = (0, f.gG)();
-                D || ((x = N.init), (D = N.info), (S = N.loader_config)),
+                (D || ((x = N.init), (D = N.info), (S = N.loader_config)),
                   (0, i.Dg)(e.agentIdentifier, x || {}),
                   (0, i.GE)(e.agentIdentifier, S || {}),
                   (D.jsAttributes ??= {}),
                   u.v6 && (D.jsAttributes.isWorker = !0),
-                  (0, i.CX)(e.agentIdentifier, D);
+                  (0, i.CX)(e.agentIdentifier, D));
                 const P = (0, i.P_)(e.agentIdentifier),
                   j = [D.beacon, D.errorBeacon];
-                _ ||
+                (_ ||
                   (P.proxy.assets &&
                     (w(P.proxy.assets), j.push(P.proxy.assets)),
                   P.proxy.beacon && j.push(P.proxy.beacon),
@@ -1321,10 +1327,10 @@
                       const p = {};
                       var b = a.ee.get(e),
                         A = b.get("tracer");
-                      (y[e] = m.IK.OFF),
+                      ((y[e] = m.IK.OFF),
                         b.on(g.Ef.REPLAY_RUNNING, (t) => {
                           y[e] = t;
-                        });
+                        }));
                       var w = "api-",
                         _ = w + "ixn-";
                       function E(t, r, n, o) {
@@ -1343,19 +1349,19 @@
                             w,
                             n,
                             !0,
-                            o || null === r ? "session" : void 0
+                            o || null === r ? "session" : void 0,
                           )(t, r)
                         );
                       }
                       function x() {}
-                      h.forEach((e) => {
+                      (h.forEach((e) => {
                         p[e] = S(w, e, !0, "api");
                       }),
                         (p.addPageAction = S(
                           w,
                           "addPageAction",
                           !0,
-                          n.D.pageAction
+                          n.D.pageAction,
                         )),
                         (p.setPageViewName = function (t, r) {
                           if ("string" == typeof t)
@@ -1374,7 +1380,7 @@
                           if ("string" == typeof e) {
                             if (
                               ["string", "number", "boolean"].includes(
-                                typeof t
+                                typeof t,
                               ) ||
                               null === t
                             )
@@ -1382,15 +1388,15 @@
                             (0, d.Z)(
                               "Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(
                                 typeof t,
-                                "> was provided."
-                              )
+                                "> was provided.",
+                              ),
                             );
                           } else
                             (0, d.Z)(
                               "Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(
                                 typeof e,
-                                "> was provided."
-                              )
+                                "> was provided.",
+                              ),
                             );
                         }),
                         (p.setUserId = function (e) {
@@ -1399,8 +1405,8 @@
                           (0, d.Z)(
                             "Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(
                               typeof e,
-                              "> was provided."
-                            )
+                              "> was provided.",
+                            ),
                           );
                         }),
                         (p.setApplicationVersion = function (e) {
@@ -1409,64 +1415,64 @@
                               "application.version",
                               e,
                               "setApplicationVersion",
-                              !1
+                              !1,
                             );
                           (0, d.Z)(
                             "Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(
                               typeof e,
-                              ">."
-                            )
+                              ">.",
+                            ),
                           );
                         }),
                         (p.start = () => {
                           try {
-                            (0, o.p)(
+                            ((0, o.p)(
                               l.xS,
                               ["API/start/called"],
                               void 0,
                               n.D.metrics,
-                              b
+                              b,
                             ),
-                              b.emit("manual-start-all");
+                              b.emit("manual-start-all"));
                           } catch (e) {
                             (0, d.Z)("An unexpected issue occurred", e);
                           }
                         }),
                         (p[g.Ef.RECORD] = function () {
-                          (0, o.p)(
+                          ((0, o.p)(
                             l.xS,
                             ["API/recordReplay/called"],
                             void 0,
                             n.D.metrics,
-                            b
+                            b,
                           ),
                             (0, o.p)(
                               g.Ef.RECORD,
                               [],
                               void 0,
                               n.D.sessionReplay,
-                              b
-                            );
+                              b,
+                            ));
                         }),
                         (p[g.Ef.PAUSE] = function () {
-                          (0, o.p)(
+                          ((0, o.p)(
                             l.xS,
                             ["API/pauseReplay/called"],
                             void 0,
                             n.D.metrics,
-                            b
+                            b,
                           ),
                             (0, o.p)(
                               g.Ef.PAUSE,
                               [],
                               void 0,
                               n.D.sessionReplay,
-                              b
-                            );
+                              b,
+                            ));
                         }),
                         (p.interaction = function (e) {
                           return new x().get("object" == typeof e ? e : {});
-                        });
+                        }));
                       const D = (x.prototype = {
                         createTracer: function (e, t) {
                           var r = {},
@@ -1478,7 +1484,7 @@
                               ["API/createTracer/called"],
                               void 0,
                               n.D.metrics,
-                              b
+                              b,
                             ),
                             f ||
                               (0, o.p)(
@@ -1486,14 +1492,14 @@
                                 [(0, v.z)(), e, r],
                                 i,
                                 n.D.spa,
-                                b
+                                b,
                               ),
                             function () {
                               if (
                                 (A.emit(
                                   (a ? "" : "no-") + "fn-start",
                                   [(0, v.z)(), i, a],
-                                  r
+                                  r,
                                 ),
                                 a)
                               )
@@ -1503,8 +1509,8 @@
                                   const t =
                                     "string" == typeof e ? new Error(e) : e;
                                   throw (
-                                    (A.emit("fn-err", [arguments, this, t], r),
-                                    t)
+                                    A.emit("fn-err", [arguments, this, t], r),
+                                    t
                                   );
                                 } finally {
                                   A.emit("fn-end", [(0, v.z)()], r);
@@ -1521,7 +1527,7 @@
                               ["API/" + t + "/called"],
                               void 0,
                               n.D.metrics,
-                              b
+                              b,
                             ),
                             i &&
                               (0, o.p)(
@@ -1529,7 +1535,7 @@
                                 [(0, v.z)(), ...arguments],
                                 r ? null : this,
                                 i,
-                                b
+                                b,
                               ),
                             r ? void 0 : this
                           );
@@ -1540,11 +1546,11 @@
                           .then(r.bind(r, 7438))
                           .then((t) => {
                             let { setAPI: r } = t;
-                            r(e), (0, s.LP)(e, "api");
+                            (r(e), (0, s.LP)(e, "api"));
                           })
                           .catch((e) => {
-                            (0, d.Z)("Downloading runtime APIs failed...", e),
-                              b.abort();
+                            ((0, d.Z)("Downloading runtime APIs failed...", e),
+                              b.abort());
                           });
                       }
                       return (
@@ -1565,28 +1571,28 @@
                           ? S(_, "routeName", void 0, n.D.softNav)
                           : S(w, "routeName", !0, n.D.spa)),
                         (p.noticeError = function (t, r) {
-                          "string" == typeof t && (t = new Error(t)),
+                          ("string" == typeof t && (t = new Error(t)),
                             (0, o.p)(
                               l.xS,
                               ["API/noticeError/called"],
                               void 0,
                               n.D.metrics,
-                              b
+                              b,
                             ),
                             (0, o.p)(
                               "err",
                               [t, (0, v.z)(), !1, r, !!y[e]],
                               void 0,
                               n.D.jserrors,
-                              b
-                            );
+                              b,
+                            ));
                         }),
                         u.il ? (0, c.b2)(() => R(), !0) : R(),
                         p
                       );
                     })(e.agentIdentifier, E, e.runSoftNavOverSpa)),
                   void 0 === e.exposed && (e.exposed = k),
-                  (_ = !0);
+                  (_ = !0));
               }
             },
             8993: (e, t, r) => {
@@ -1636,9 +1642,9 @@
           var o = (n[e] = {
             exports: {},
           });
-          return r[e](o, o.exports, i), o.exports;
+          return (r[e](o, o.exports, i), o.exports);
         }
-        (i.m = r),
+        ((i.m = r),
           (i.d = (e, t) => {
             for (var r in t)
               i.o(t, r) &&
@@ -1651,7 +1657,7 @@
           (i.f = {}),
           (i.e = (e) =>
             Promise.all(
-              Object.keys(i.f).reduce((t, r) => (i.f[r](e, t), t), [])
+              Object.keys(i.f).reduce((t, r) => (i.f[r](e, t), t), []),
             )),
           (i.u = (e) => "nr-rum-1.260.1.min.js"),
           (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
@@ -1681,18 +1687,18 @@
                 var f = {
                   75: "sha512-WLWoh5UWJ/3XNXjYcJoBc8bSPHGDdu86FTMTgY1yxRTQeEmWWEBFFVPIfCRSbxd8K297eHg86RaJPD+UJxG1+w==",
                 };
-                ((s = document.createElement("script")).charset = "utf-8"),
+                (((s = document.createElement("script")).charset = "utf-8"),
                   (s.timeout = 120),
                   i.nc && s.setAttribute("nonce", i.nc),
                   s.setAttribute("data-webpack", t + o),
                   (s.src = r),
                   0 !== s.src.indexOf(window.location.origin + "/") &&
                     (s.crossOrigin = "anonymous"),
-                  f[a] && (s.integrity = f[a]);
+                  f[a] && (s.integrity = f[a]));
               }
               e[r] = [n];
               var g = (t, n) => {
-                  (s.onerror = s.onload = null), clearTimeout(p);
+                  ((s.onerror = s.onload = null), clearTimeout(p));
                   var i = e[r];
                   if (
                     (delete e[r],
@@ -1707,22 +1713,22 @@
                     type: "timeout",
                     target: s,
                   }),
-                  12e4
+                  12e4,
                 );
-              (s.onerror = g.bind(null, s.onerror)),
+              ((s.onerror = g.bind(null, s.onerror)),
                 (s.onload = g.bind(null, s.onload)),
-                c && document.head.appendChild(s);
+                c && document.head.appendChild(s));
             }
           }),
           (i.r = (e) => {
-            "undefined" != typeof Symbol &&
+            ("undefined" != typeof Symbol &&
               Symbol.toStringTag &&
               Object.defineProperty(e, Symbol.toStringTag, {
                 value: "Module",
               }),
               Object.defineProperty(e, "__esModule", {
                 value: !0,
-              });
+              }));
           }),
           (i.p = "https://js-agent.newrelic.com/"),
           (() => {
@@ -1748,7 +1754,7 @@
                       ) {
                         var o = r && ("load" === r.type ? "missing" : r.type),
                           a = r && r.target && r.target.src;
-                        (s.message =
+                        ((s.message =
                           "Loading chunk " +
                           t +
                           " failed.\n(" +
@@ -1759,11 +1765,11 @@
                           (s.name = "ChunkLoadError"),
                           (s.type = o),
                           (s.request = a),
-                          n[1](s);
+                          n[1](s));
                       }
                     },
                     "chunk-" + t,
-                    t
+                    t,
                   );
                 }
             };
@@ -1777,11 +1783,12 @@
                   if (c) c(i);
                 }
                 for (t && t(r); u < a.length; u++)
-                  (o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
+                  ((o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0));
               },
               r = (self["webpackChunk:NRBA-1.260.1.PROD"] =
                 self["webpackChunk:NRBA-1.260.1.PROD"] || []);
-            r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
+            (r.forEach(t.bind(null, 0)),
+              (r.push = t.bind(null, r.push.bind(r))));
           })(),
           (() => {
             "use strict";
@@ -1797,7 +1804,7 @@
                   arguments.length > 0 && void 0 !== arguments[0]
                     ? arguments[0]
                     : (0, r.ky)(16);
-                (this.agentIdentifier = e), (this.ee = n.ee.get(e));
+                ((this.agentIdentifier = e), (this.ee = n.ee.get(e)));
               }
               #e(t) {
                 for (
@@ -1813,8 +1820,8 @@
                 (0, e.Z)(
                   "Call to agent api ".concat(
                     t,
-                    " failed. The API is not currently initialized."
-                  )
+                    " failed. The API is not currently initialized.",
+                  ),
                 );
               }
               addPageAction(e, t) {
@@ -1897,7 +1904,7 @@
                 let n =
                   !(arguments.length > 3 && void 0 !== arguments[3]) ||
                   arguments[3];
-                super(e, t, r),
+                (super(e, t, r),
                   (this.auto = n),
                   (this.abortHandler = void 0),
                   (this.featAggregate = void 0),
@@ -1905,18 +1912,18 @@
                   !1 ===
                     (0, s.Mt)(
                       this.agentIdentifier,
-                      "".concat(this.featureName, ".autoStart")
+                      "".concat(this.featureName, ".autoStart"),
                     ) && (this.auto = !1),
                   this.auto
                     ? (0, l.RP)(e, r)
                     : this.ee.on(
                         "manual-start-all",
                         (0, m.Z)(() => {
-                          (0, l.RP)(this.agentIdentifier, this.featureName),
+                          ((0, l.RP)(this.agentIdentifier, this.featureName),
                             (this.auto = !0),
-                            this.importAggregator();
-                        })
-                      );
+                            this.importAggregator());
+                        }),
+                      ));
               }
               importAggregator() {
                 let t,
@@ -1938,12 +1945,12 @@
                       n = e(this.agentIdentifier);
                     }
                   } catch (t) {
-                    (0, e.Z)(
+                    ((0, e.Z)(
                       "A problem occurred when starting up session manager. This page will not start or extend any session.",
-                      t
+                      t,
                     ),
                       this.featureName === a.D.sessionReplay &&
-                        this.abortHandler?.();
+                        this.abortHandler?.());
                   }
                   try {
                     if (!this.#t(this.featureName, n))
@@ -1955,24 +1962,24 @@
                         .e(75)
                         .then(i.bind(i, 8582)),
                       { Aggregate: o } = await e(this.featureName, "aggregate");
-                    (this.featAggregate = new o(
+                    ((this.featAggregate = new o(
                       this.agentIdentifier,
                       this.aggregator,
-                      r
+                      r,
                     )),
-                      t(!0);
+                      t(!0));
                   } catch (r) {
-                    (0, e.Z)(
+                    ((0, e.Z)(
                       "Downloading and initializing ".concat(
                         this.featureName,
-                        " failed..."
+                        " failed...",
                       ),
-                      r
+                      r,
                     ),
                       this.abortHandler?.(),
                       (0, l.LP)(this.agentIdentifier, this.featureName, !0),
                       t(!1),
-                      this.ee && this.ee.abort();
+                      this.ee && this.ee.abort());
                   }
                 };
                 p.il ? (0, g.b2)(() => n(), !0) : n();
@@ -1994,14 +2001,14 @@
                 let r =
                   !(arguments.length > 2 && void 0 !== arguments[2]) ||
                   arguments[2];
-                super(e, t, y.t, r), this.importAggregator();
+                (super(e, t, y.t, r), this.importAggregator());
               }
             }
             var w = i(1117),
               _ = i(1284);
             class E extends w.w {
               constructor(e) {
-                super(e), (this.aggregatedData = {});
+                (super(e), (this.aggregatedData = {}));
               }
               store(e, t, r, n, i) {
                 var o = this.getBucket(e, t, r, i);
@@ -2026,7 +2033,7 @@
                 var o = this.getBucket(e, t, n, i);
                 if (o.metrics) {
                   var a = o.metrics;
-                  (a.count += r.count),
+                  ((a.count += r.count),
                     (0, _.D)(r, function (e, t) {
                       if ("count" !== e) {
                         var n = a[e],
@@ -2046,12 +2053,12 @@
                               );
                             })(i, a[e]));
                       }
-                    });
+                    }));
                 } else o.metrics = r;
               }
               storeMetric(e, t, r, n) {
                 var i = this.getBucket(e, t, r);
-                return (i.stats = x(n, i.stats)), i;
+                return ((i.stats = x(n, i.stats)), i);
               }
               getBucket(e, t, r, n) {
                 this.aggregatedData[e] || (this.aggregatedData[e] = {});
@@ -2073,9 +2080,11 @@
               }
               take(e) {
                 for (var t = {}, r = "", n = !1, i = 0; i < e.length; i++)
-                  (t[(r = e[i])] = Object.values(this.aggregatedData[r] || {})),
+                  ((t[(r = e[i])] = Object.values(
+                    this.aggregatedData[r] || {},
+                  )),
                     t[r].length && (n = !0),
-                    delete this.aggregatedData[r];
+                    delete this.aggregatedData[r]);
                 return n ? t : null;
               }
             }
@@ -2090,16 +2099,16 @@
                     return e;
                   })(t)
                 : t
-                ? (t.c || (t = D(t.t)),
-                  (t.c += 1),
-                  (t.t += e),
-                  (t.sos += e * e),
-                  e > t.max && (t.max = e),
-                  e < t.min && (t.min = e),
-                  t)
-                : {
-                    t: e,
-                  };
+                  ? (t.c || (t = D(t.t)),
+                    (t.c += 1),
+                    (t.t += e),
+                    (t.sos += e * e),
+                    e > t.max && (t.max = e),
+                    e < t.min && (t.min = e),
+                    t)
+                  : {
+                      t: e,
+                    };
             }
             function D(e) {
               return {
@@ -2123,7 +2132,7 @@
                 let r =
                   !(arguments.length > 2 && void 0 !== arguments[2]) ||
                   arguments[2];
-                super(e, t, j.t, r),
+                (super(e, t, j.t, r),
                   p.il &&
                     ((0, N.N)(
                       () =>
@@ -2132,9 +2141,9 @@
                           [(0, T.z)()],
                           void 0,
                           j.t,
-                          this.ee
+                          this.ee,
                         ),
-                      !0
+                      !0,
                     ),
                     (0, P.bP)("pagehide", () =>
                       (0, k.p)(
@@ -2142,10 +2151,10 @@
                         [(0, T.z)()],
                         void 0,
                         j.t,
-                        this.ee
-                      )
+                        this.ee,
+                      ),
                     ),
-                    this.importAggregator());
+                    this.importAggregator()));
               }
             }
             var O = i(3081);
@@ -2155,12 +2164,12 @@
                 let r =
                   !(arguments.length > 2 && void 0 !== arguments[2]) ||
                   arguments[2];
-                super(e, t, O.t9, r), this.importAggregator();
+                (super(e, t, O.t9, r), this.importAggregator());
               }
             }
             new (class extends o {
               constructor(t, r) {
-                super(r),
+                (super(r),
                   p._A
                     ? ((this.sharedAggregator = new E({
                         agentIdentifier: this.agentIdentifier,
@@ -2170,13 +2179,13 @@
                       (this.desiredFeatures = new Set(t.features || [])),
                       this.desiredFeatures.add(A),
                       (this.runSoftNavOverSpa = [...this.desiredFeatures].some(
-                        (e) => e.featureName === a.D.softNav
+                        (e) => e.featureName === a.D.softNav,
                       )),
                       (0, d.j)(this, t, t.loaderType || "agent"),
                       this.run())
                     : (0, e.Z)(
-                        "Failed to initialize the agent. Could not determine the runtime environment."
-                      );
+                        "Failed to initialize the agent. Could not determine the runtime environment.",
+                      ));
               }
               get config() {
                 return {
@@ -2190,7 +2199,7 @@
                 try {
                   const t = u(this.agentIdentifier),
                     r = [...this.desiredFeatures];
-                  r.sort((e, t) => a.p[e.featureName] - a.p[t.featureName]),
+                  (r.sort((e, t) => a.p[e.featureName] - a.p[t.featureName]),
                     r.forEach((r) => {
                       if (
                         !t[r.featureName] &&
@@ -2218,42 +2227,42 @@
                             return [];
                         }
                       })(r.featureName);
-                      n.every((e) => e in this.features) ||
+                      (n.every((e) => e in this.features) ||
                         (0, e.Z)(
                           ""
                             .concat(
                               r.featureName,
-                              " is enabled but one or more dependent features has not been initialized ("
+                              " is enabled but one or more dependent features has not been initialized (",
                             )
                             .concat(
                               (0, R.P)(n),
-                              "). This may cause unintended consequences or missing data..."
-                            )
+                              "). This may cause unintended consequences or missing data...",
+                            ),
                         ),
                         (this.features[r.featureName] = new r(
                           this.agentIdentifier,
-                          this.sharedAggregator
-                        ));
-                    });
+                          this.sharedAggregator,
+                        )));
+                    }));
                 } catch (t) {
                   (0, e.Z)(
                     "Failed to initialize all enabled instrument classes (agent aborted) -",
-                    t
+                    t,
                   );
                   for (const e in this.features)
                     this.features[e].abortHandler?.();
                   const r = (0, S.fP)();
-                  delete r.initializedAgents[this.agentIdentifier]?.api,
+                  (delete r.initializedAgents[this.agentIdentifier]?.api,
                     delete r.initializedAgents[this.agentIdentifier]?.features,
-                    delete this.sharedAggregator;
-                  return r.ee.get(this.agentIdentifier).abort(), !1;
+                    delete this.sharedAggregator);
+                  return (r.ee.get(this.agentIdentifier).abort(), !1);
                 }
               }
             })({
               features: [A, I, M],
               loaderType: "lite",
             });
-          })();
+          })());
       })();
     </script>
     <script src="js\test\1.js"></script>
@@ -2298,15 +2307,34 @@
     <div id="loader" class="loading"></div>
 
     <h1>
-      Yonathan Evan C <br /><span
+      Yonathan Evan C <br /><span data-i18n="role"
         >Fullstack Software Engineer & Web Designer</span
       >
     </h1>
 
+    <button
+      id="lang-toggle"
+      style="
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        z-index: 1000;
+        background: none;
+        border: 1px solid #222;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-family: inherit;
+      "
+    >
+      العربية
+    </button>
+
     <ul id="nav">
-      <li class="current"><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li id="trigger-cycle"><a href="#work">My Recent Work</a></li>
+      <li class="current"><a href="#home" data-i18n="home">Home</a></li>
+      <li><a href="#about" data-i18n="about">About Me</a></li>
+      <li id="trigger-cycle">
+        <a href="#work" data-i18n="work">My Recent Work</a>
+      </li>
     </ul>
 
     <section id="home">
@@ -2325,7 +2353,8 @@
         I'm Currently a Open-Source Contributor of
         <a href="https://www.expensify.com" target="_blank">Expensify</a>,
         <br />
-        and Consultant of several Solana Project.
+        and Consultant of several Project whom needs to launch their MVP fast
+        and efficient.
         <br />
         <br />
         Let's connect and discuss your need to me here:
@@ -2338,6 +2367,8 @@
           target="_blank"
           >here</a
         >
+        <br />
+        <br />
         <br />
         <br />
         For other projects, please see below
@@ -2387,30 +2418,26 @@
 
     <section id="work">
       <nav id="cycle">
-        <a
-          class="active"
-          href="https://www.crosschaincoalition.com/"
-          target="_blank"
-        >
+        <a class="active" href="https://wpoptic.com/" target="_blank">
           <div
             data-mouse-parallax=".05"
             class="bg"
-            style="background-image: url(css/img/bg-ccc.png)"
+            style="background-image: url(css/img/bg-wpoptic.png)"
           ></div>
           <div class="cap"><span data-mouse-parallax=".03">C</span></div>
           <div data-mouse-parallax=".03" class="url">
-            Cross Chain Coalition | Webflow, React, CSS and Storyblok
+            Wpoptic | React, Chrome Extension, Manifest 3, and Supabase
           </div>
         </a>
-        <a href="https://docs.palomachain.com/" target="_blank">
+        <a class="active" href="https://buy-sell-bulk.vercel.app/" target="_blank">
           <div
             data-mouse-parallax=".05"
             class="bg"
-            style="background-image: url(css/img/bg-paloma-docs.png)"
+            style="background-image: url(css/img/bg-reloadsol.png)"
           ></div>
-          <div class="cap"><span data-mouse-parallax=".03">D</span></div>
+          <div class="cap"><span data-mouse-parallax=".03">C</span></div>
           <div data-mouse-parallax=".03" class="url">
-            Palomachain documentation | Vue via Vuepress, and CSS
+            Reloadsol | Next.js, and Supabase
           </div>
         </a>
         <a href="https://www.neliti.com/" target="_blank">
@@ -2463,7 +2490,7 @@
       </svg>
     </section>
 
-    <div id="copyright">&copy; 2024</div>
+    <div id="copyright">&copy; 2026</div>
 
     <a
       id="github"
@@ -2480,7 +2507,7 @@
     <script>
       window.jQuery ||
         document.write(
-          '<script src="js/vendor/jquery-1.12.0.min.js"><\/script>'
+          '<script src="js/vendor/jquery-1.12.0.min.js"><\/script>',
         );
     </script>
     <script src="js\plugins.js"></script>

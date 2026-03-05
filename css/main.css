@@ -10,16 +10,16 @@
 	transform: translate3d(0,0,0);
 	position: fixed;
 	top: 0;
-	left: -100%;
+	inset-inline-start: -100%;
 	width: 100%;
 	height: 100%;
 	background: #F5F5F5;
 	opacity: 0;
-	transition: opacity 0.9s ease, left 0s ease .9s;
+	transition: opacity 0.9s ease, inset-inline-start 0s ease .9s;
 }
 #loader.loading {
 	transform: translate3d(0,0,0);
-	left: 0;
+	inset-inline-start: 0;
 	opacity: 1;
 }
 
@@ -35,6 +35,9 @@ html {
 	font-weight: 400;
 	font-size: 62.5%;
 	font-size: 10px;
+}
+html[lang="ar"] {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 body {
 	font-size: 1.4rem;
@@ -75,7 +78,7 @@ h1
 	margin: 0;
 	position: fixed;
 	top: 4.0rem;
-	left: 4.0rem;
+	inset-inline-start: 4.0rem;
 	z-index: 100;
 }
 
@@ -90,7 +93,7 @@ h1 span
     text-transform: uppercase;
 	position: fixed;
     bottom: 10.0rem;
-    right: 4.0rem;
+    inset-inline-end: 4.0rem;
     white-space: nowrap;
     -ms-transform: rotate(90deg);
         transform: rotate(90deg);
@@ -98,10 +101,14 @@ h1 span
         transform-origin: 100% 50%;
     z-index: 100;
 }
+html[dir="rtl"] #copyright {
+    transform: rotate(-90deg);
+    transform-origin: 0% 50%;
+}
 #linkedin {
 	position: fixed;
 	bottom: 7.0rem;
-	right: 2.8rem;
+	inset-inline-end: 2.8rem;
 	width: 2.4rem;
 	height: 2.4rem;
 	background: transparent url(img/linkedin-logo.svg) no-repeat center scroll;
@@ -111,7 +118,7 @@ h1 span
 #github {
 	position: fixed;
 	bottom: 4.0rem;
-	right: 3rem;
+	inset-inline-end: 3rem;
 	width: 1.8rem;
 	height: 1.8rem;
 	background: transparent url(img/github-logo.png) no-repeat center scroll;
@@ -121,7 +128,7 @@ h1 span
 ul#nav {
     position: fixed;
     bottom: 4.0rem;
-    left: 3.5rem;
+    inset-inline-start: 3.5rem;
     list-style-type: none;
     margin: 0;
     padding: 0 .5rem;
@@ -148,8 +155,8 @@ ul#nav {
 				content: '';
 				position: absolute;
 				top: 50%;
-				left: -.5rem;
-				right: -.5rem;
+				inset-inline-start: -.5rem;
+				inset-inline-end: -.5rem;
 				height: .1rem;
 				background: #222;
 				-ms-transform: scaleX(0);
@@ -158,6 +165,9 @@ ul#nav {
 				    transform-origin: center left;
 				transition: transform 0.3s ease;
 			}
+            html[dir="rtl"] #nav li a:before {
+                transform-origin: center right;
+            }
 			#nav li.current a:before {
 				-ms-transform: scaleX(1);
 				    transform: scaleX(1);
@@ -176,7 +186,7 @@ section#home {
 	#command {
 		position: absolute;
 		top: 50%;
-		left: 0;
+		inset-inline-start: 0;
 		width: 100%;
 		height: 41.0rem;
 		margin-top: -20.5rem;
@@ -186,11 +196,14 @@ section#home {
 	#ink {
 	    position: absolute;
 	    top: 50%;
-	    left: 50%;
+	    inset-inline-start: 50%;
 	    transform: translate3d(-50%,-50%,0);
 	    width: auto;
 		height: 40.6rem;
 	}
+    html[dir="rtl"] #ink {
+        transform: translate3d(50%,-50%,0);
+    }
 	
 /*
 <----------------||----------------$About----------------||---------------->
@@ -206,11 +219,14 @@ section#about {
 		width: 50.0rem;
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		inset-inline-start: 50%;
 		-ms-transform: translate(-50%,-50%);
 		    transform: translate(-50%,-50%);
 		transition: opacity 0.6s ease;
 	}
+    html[dir="rtl"] #about p {
+        transform: translate(50%,-50%);
+    }
 	#about p.hide {
 		opacity: 0;
 	}
@@ -222,17 +238,20 @@ section#about {
 	#about form {
 		position: absolute;
 		top: 50%;
-		left: -150%;
+		inset-inline-start: -150%;
 		width: 50.0rem;
 		-ms-transform: translate(-50%,-50%);
 		    transform: translate(-50%,-50%);
 		opacity: 0;
-		transition: opacity 0.6s ease, left 0s ease 0.6s;
+		transition: opacity 0.6s ease, inset-inline-start 0s ease 0.6s;
 	}
+    html[dir="rtl"] #about form {
+        transform: translate(50%,-50%);
+    }
 	#about form.show {
 		opacity: 1;
-		left: 50%;
-		transition: opacity 0.6s ease, left 0s ease 0s;
+		inset-inline-start: 50%;
+		transition: opacity 0.6s ease, inset-inline-start 0s ease 0s;
 	}
 			#contact-form ul {
 				margin: 0 -1.5rem;
@@ -242,7 +261,7 @@ section#about {
 				#contact-form ul > li {
 					position: relative;
 					width: 50%;
-					float: left;
+					float: inline-start;
 					padding: 0 1.5rem 3.0rem;
 					margin-bottom: 2.0rem;
 				}
@@ -258,7 +277,7 @@ section#about {
 						label:before {
 							content: '';
 							position: absolute;
-							left: 1.5rem;
+							inset-inline-start: 1.5rem;
 							bottom: 3.0rem;
 							width: .2rem;
 							height: 2.0rem;
@@ -268,7 +287,7 @@ section#about {
 						label > span {
 							position: absolute;
 							top: 1.2rem;
-							left: 3.5rem;
+							inset-inline-start: 3.5rem;
 							font-size: 1.2rem;
 						    font-weight: 700;
 						    text-transform: uppercase;
@@ -365,14 +384,17 @@ section#work {
 	    height: 30.0rem;
 	    position: absolute;
 	    top: 50%;
-	    left: 50%;
+	    inset-inline-start: 50%;
 	    -ms-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
 	}
+    html[dir="rtl"] #cycle {
+        transform: translate(50%,-50%);
+    }
 		#cycle > a {
 			position: absolute;
 			top: 0;
-			left: 0;
+			inset-inline-start: 0;
 			width: 100%;
 			height: 100%;
 			transform: translateZ(0);
@@ -387,7 +409,7 @@ section#work {
 			.bg {
 				position: absolute;
 				top: 0;
-				left: 0;
+				inset-inline-start: 0;
 				width: 100%;
 				height: 100%;
 				background: transparent no-repeat center scroll;
@@ -413,7 +435,7 @@ section#work {
 				position: absolute;
 				bottom: -5.0rem;
 				line-height: 5.0rem;
-				left: 0;
+				inset-inline-start: 0;
 				width: 100%;
 				text-align: center;
 				text-decoration: none;
@@ -424,7 +446,7 @@ section#work {
 			top: 50%;
 			-ms-transform: translateY(-50%);
 			    transform: translateY(-50%);
-			right: -5.0rem;
+			inset-inline-end: -5.0rem;
 			width: 1.0rem;
 		}
 			#pager > span {
@@ -449,7 +471,7 @@ section#work {
 	#cycle-loader {
 		position: absolute;
 		top: 4.0rem;
-		right: 4.0rem;
+		inset-inline-end: 4.0rem;
 		width: 4.0rem;
 		height: 4.0rem;
 		opacity: 1;
@@ -487,7 +509,7 @@ section#work {
 	}
 	h1 {
 		top: 3.6rem;
-		left: 3.6rem;
+		inset-inline-start: 3.6rem;
 		position: absolute;
 	}
 	#command {
@@ -519,10 +541,13 @@ section#work {
 		-ms-transform-origin: 100% 0%;
 		    transform-origin: 100% 0%;
 		bottom: 0;
-		right: 0;
+		inset-inline-end: 0;
 		line-height: 3.6rem;
 		font-size: .9rem;
 	}
+    html[dir="rtl"] #copyright {
+        transform-origin: 0% 0%;
+    }
 	#linkedin {
 		display: none;
 	}
@@ -538,16 +563,16 @@ section#work {
 		}
 	nav#pager {
 		top: -4.0rem;
-		right: auto;
+		inset-inline-end: auto;
 		width: 10.0rem;
-		left: 3.6rem;
+		inset-inline-start: 3.6rem;
 	}
 		#pager > span {
-			float: left;
-			margin-right: 1.5rem;
+			float: inline-start;
+			margin-inline-end: 1.5rem;
 		}
 	#cycle-loader {
-		right: 3.6rem;
+		inset-inline-end: 3.6rem;
 	}
 }
 
